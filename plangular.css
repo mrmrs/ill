@@ -58,7 +58,7 @@ code, pre, samp, .mono { font-family: 'Source Code Pro', monospace; }
 
 .pad1 { padding: 16px; }
 .pad2 { padding: 32px; }
-.pad4 { padding: 64px; }
+.pad4 { padding: 128px 32px; }
 
 .pad-x1 { padding-right: 16px; padding-left: 16px; }
 .pad-x2 { padding-right: 32px; padding-left: 32px; }

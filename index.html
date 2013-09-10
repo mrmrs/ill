@@ -30,7 +30,7 @@
     <div class="bd">
 
       <article plangular data-src="'https://soundcloud.com/illlillies/sets/greatest-hits-volume-two'" class="grid-1 bd">
-        <div class="pad4 bd bg-center bg-cover white shadow-darken" style="background-image: url(images/beach.jpg)">
+        <div class="pad4 bd bg-center bg-cover shadow-darken" style="background-image: url(images/beach.jpg)">
           <h1 class="h4 caps reg dark-gray">{{ playlist.title }}</h1>
           <div class="media">
             <div class="img mr1">
@@ -73,8 +73,8 @@
           </div>
         </div>
         <div class="pad1 bd bg1">
-          <ol class="white">
-            <li ng-repeat="track in playlist.tracks" class="ml2 song-title"><a href="" ng-click="player.play(playlist.tracks, $index)" class="db" ng-class="{ 'white': (player.playing || player.paused) != track, 'dark-gray': (player.playing || player.paused) == track }">
+          <ol >
+            <li ng-repeat="track in playlist.tracks" class="ml2 song-title"><a href="" ng-click="player.play(playlist.tracks, $index)" class="db" ng-class="{ 'dark-gray': (player.playing || player.paused) != track, 'dark-gray': (player.playing || player.paused) == track }">
                {{ track.title }}
             </a></li>
           </ol>
