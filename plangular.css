@@ -3,7 +3,7 @@
 article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}audio,canvas,video{display:inline-block}audio:not([controls]){display:none;height:0}[hidden]{display:none}body,h1,h2,h3,h4,h5,h6,p,ul,ol,dl{margin:0;padding:0}a:focus{outline:thin dotted}a:active,a:hover{outline:0}b,strong{font-weight:bold}dfn{font-style:italic}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}mark{background:#ff0;color:#000}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em}q{quotes:"\201C" "\201D" "\2018" "\2019"}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:0}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em}legend{border:0;padding:0}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}button,input{line-height:normal}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto;vertical-align:top}table{border-collapse:collapse;border-spacing:0}
 
 body {
-  font-family: 'Titillium Web', Helvetica, sans-serif;
+  font-family: 'proxima-nova', Helvetica, sans-serif;
   font-size: 100%;
   line-height: 1.5;
   color: #444;
@@ -12,8 +12,9 @@ body {
 
 a {
   text-decoration: none;
-  color: #0e6;
+  color: #128085;
 }
+
 a:hover {
   color: #0d5;
 }
@@ -36,11 +37,20 @@ code, pre, samp, .mono { font-family: 'Source Code Pro', monospace; }
 
 /*.massive { font-size: 64px; }*/
 @media screen and (min-width: 640px) {
-  .massive { font-size: 80px; }
+  .massive { font-size: 60px; }
+  .h4 { font-size: 32px; }
 }
 
-.bold { font-weight: bold; }
+@media screen and (min-width: 1024px) {
+  .massive { font-size: 90px; }
+  .h4 { font-size: 32px; }
+  .song-title { font-size: 24px; }
+}
+
+.bold { font-weight: 600; }
 .reg  { font-weight: normal; }
+.thin  { font-weight: 100; }
+.ls2 {letter-spacing: .2em;}
 .caps { text-transform: uppercase; letter-spacing: .2em; }
 .caps-tracked { letter-spacing: .5em; }
 
@@ -56,6 +66,7 @@ code, pre, samp, .mono { font-family: 'Source Code Pro', monospace; }
 .pad4-res { padding: 32px; }
 @media screen and (min-width: 640px) {
   .pad4-res { padding: 64px; }
+  .pad5-res { padding: 128px; }
 }
 
 .m0 { margin: 0; }
@@ -79,7 +90,7 @@ code, pre, samp, .mono { font-family: 'Source Code Pro', monospace; }
 .mb4 { margin-bottom: 64px; }
 .ml4 { margin-left:   64px; }
 
-.tappad { 
+.tappad {
   /*min-height: 48px;*/
   line-height: 48px;
   padding: 0 8px;
@@ -136,14 +147,14 @@ code, pre, samp, .mono { font-family: 'Source Code Pro', monospace; }
   left:0;
   margin: auto;
 }
- 
+
 .top    { top: 0; }
 .right  { right: 0; }
 .bottom { bottom: 0; }
 .left   { left: 0; }
 
 .right1 { right: 16px; }
- 
+
 .z1 { z-index: 1; }
 .z2 { z-index: 2; }
 .z3 { z-index: 3; }
@@ -200,13 +211,6 @@ code, pre, samp, .mono { font-family: 'Source Code Pro', monospace; }
   float: left;
   width: 100%;
 }
-  @media screen and (min-width: 1024px) {
-    .grid-1 { width: 45%; }
-    .grid-1:nth-child(2n+1) {
-      margin-right: 10%;
-      clear: left;
-    }
-  }
 
 
 
@@ -214,7 +218,7 @@ code, pre, samp, .mono { font-family: 'Source Code Pro', monospace; }
   color: #fff;
   background-color: #0cf;
 }
-.btn-link:hover { 
+.btn-link:hover {
   color: #fff;
   background-color: #0ad;
 }
@@ -224,7 +228,7 @@ code, pre, samp, .mono { font-family: 'Source Code Pro', monospace; }
   color: #fff;
   background-color: #f60;
 }
-.btn-red:hover { 
+.btn-red:hover {
   color: #fff;
   background-color: #d40;
 }
@@ -234,7 +238,7 @@ code, pre, samp, .mono { font-family: 'Source Code Pro', monospace; }
   color: #fff;
   background-color: #0e6;
 }
-.btn-green:hover { 
+.btn-green:hover {
   color: #fff;
   background-color: #0d5;
 }
@@ -313,7 +317,7 @@ a.white:hover  { color: rgba(255,255,255,.8); }
   0% { -webkit-transform: scale(.2); }
   80% { -webkit-transform: scale(1.1); }
   100% { -webkit-transform: scale(1); }
-} 
+}
 .anim-popin { -webkit-animation: popin .1s; }
 
 @-webkit-keyframes spin {
@@ -326,7 +330,7 @@ a.white:hover  { color: rgba(255,255,255,.8); }
   from  {-webkit-transform: translate3d(100%, 0, 0);}
   to    {-webkit-transform: translate3d(0%, 0, 0);}
 }
-.anim-slideleft { -webkit-animation: slideleft .2s ease; } 
+.anim-slideleft { -webkit-animation: slideleft .2s ease; }
 
 .anim-hack {
   -webkit-backface-visibility: hidden;
@@ -337,7 +341,7 @@ a.white:hover  { color: rgba(255,255,255,.8); }
   0%   { opacity: 0; top: 4rem; }
   100% { opacity: 1; top: 0; }
 }
- 
+
 .float-up {
   opacity: 0;
   position: relative;
@@ -357,7 +361,7 @@ a.white:hover  { color: rgba(255,255,255,.8); }
   -webkit-animation-duration: 2s;
   -webkit-animation-fill-mode: forwards;
 }
- 
+
 .anim-delay-1 { -webkit-animation-delay: .1s; }
 .anim-delay-2 { -webkit-animation-delay: .2s; }
 .anim-delay-3 { -webkit-animation-delay: .3s; }
@@ -378,10 +382,9 @@ a.white:hover  { color: rgba(255,255,255,.8); }
 }
 
 .header-bg {
-  background-size: 1600%;
-  background-image: url(images/plangular-waveform-3.svg);
-  background-position: left center;
-  background-repeat: repeat-x;
+ /* background-image: url(images/ferris.jpg);*/
+  background-repeat: no-repeat;
+  background-color: #EAFFDE;
 }
 
 .header-waveform-img {
@@ -440,3 +443,11 @@ a.white:hover  { color: rgba(255,255,255,.8); }
   position: relative;
   left: .125em;
 }
+
+.op-50 {opacity: .5; }
+.bg-ltgry { background: #efefef;}
+.pink { color: #ccc;}
+
+blockquote {margin:0;padding:0;}
+.bg2 { background-color: #EDFFFD; }
+.bg1 { background-color: #C3E6DD; }
